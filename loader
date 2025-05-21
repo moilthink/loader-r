@@ -39,26 +39,6 @@ local Projects = {
     };
 }
 
-local NotificationBindable = Instance.new("BindableFunction")
-
-NotificationBindable.OnInvoke = function(buttonPressed)
-    if button1 == "yes" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/moilthink/script-r/refs/heads/main/universal"))()
-    elseif button2 == "no" then
-        print("well")
-    end
-end
-
--- Create the notification
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Execute Universal?",
-    Text = "Optional",
-    Duration = 5,  -- Time in seconds
-    Callback = NotificationBindable,  -- Set the callback for the button click
-    Button1 = "yes",  -- First button text ("yes")
-    Button2 = "no",   -- Second button text ("no")
-})
-
 local Loaded = false
 local gameId = game.GameId
 
