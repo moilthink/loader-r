@@ -42,9 +42,9 @@ local Projects = {
 local NotificationBindable = Instance.new("BindableFunction")
 
 NotificationBindable.OnInvoke = function(buttonPressed)
-    if buttonPressed == "yes" then
+    if button1 == "yes" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/moilthink/script-r/refs/heads/main/universal"))()
-    elseif buttonPressed == "no" then
+    elseif button2 == "no" then
         print("well")
     end
 end
